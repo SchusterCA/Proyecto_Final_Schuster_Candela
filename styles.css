@@ -1,11 +1,13 @@
 main {
     padding-top: 2rem;
 }
-/**Inicio**/
+
 
 body {
     background-image: linear-gradient(to top, #14010f, #1a0113, #1e0217, #23021a, #27021d);
 }
+
+/**sesión**/
 
 .principal_box {
     background-image: url(../img/inicios.png);
@@ -61,14 +63,14 @@ a {
 }
 
 .text-registro a {
-    color: #FFD700; /* Dorado */
+    color: #FFD700;
     font-weight: 600;
     text-decoration: underline;
     transition: all 0.3s ease;
 }
 
 .text-registro a:hover {
-    color: #FFA500; /* Naranja dorado */
+    color: #FFA500;
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
@@ -83,7 +85,7 @@ a {
 /**header**/
 
 .logoimg {
-    width: 7rem;
+    width: 6rem;
     margin-top: 0.5rem;
 }
 
@@ -100,7 +102,7 @@ header {
     font-family: "Cinzel Decorative", serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding: 1rem;
     text-decoration: none;
 }
@@ -120,6 +122,21 @@ header {
     0 0 16px rgba(245, 197, 66, 0.5);
 }
 
+li {
+  list-style: none;
+}
+
+.busqueda_nav {
+  margin-top: 2rem;
+}
+
+.input_snav {
+  border-radius: 0.5rem;
+  border: none;
+  height: 2rem;
+
+}
+
 /**textos**/
 
 .texto_inicio {
@@ -132,7 +149,7 @@ header {
     font-weight: 700;
     text-align: center;
     color: #f18e94;
-    font-size: 4rem;
+    font-size: 2.5rem;
     letter-spacing: 4px;
 
     text-shadow:
