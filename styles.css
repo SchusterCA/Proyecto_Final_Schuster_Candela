@@ -1,0 +1,229 @@
+main {
+    padding-top: 2rem;
+}
+/**Inicio**/
+
+body {
+    background-image: linear-gradient(to top, #14010f, #1a0113, #1e0217, #23021a, #27021d);
+}
+
+.principal_box {
+    background-image: url(../img/inicios.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h1_txt {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 10rem;
+    text-shadow: 0.1rem 0.1rem 0.3rem #64024C;
+}
+
+#form-registro {
+    background-color: #ffffffd2;
+    margin: 8rem 40rem 10rem 40rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    box-shadow: 0.2rem 0.2rem 1.5rem #64024C;
+}
+
+.btn-primary {
+    margin-left: 9rem;
+    margin-top: 1rem;
+    background-color: #64024C;
+    color: #ffffff;
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    border: #ffffff;
+}
+
+a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: rgb(61, 61, 61);
+}
+
+
+.text-registro {
+    color: #ffffff;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
+}
+
+.text-registro a {
+    color: #FFD700; /* Dorado */
+    font-weight: 600;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+.text-registro a:hover {
+    color: #FFA500; /* Naranja dorado */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+
+.link-registro-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/**header**/
+
+.logoimg {
+    width: 7rem;
+    margin-top: 0.5rem;
+}
+
+header {
+    top: 0;
+    background-color: #14010F;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+}
+
+.navlink {
+    color: #ffffff;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.navlink:hover {
+    color: #fff4a4;
+}
+
+#selected {
+  color: #fff4a4;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 4px;
+
+  text-shadow:
+    0 0 4px rgba(245, 197, 66, 0.6),
+    0 0 8px rgba(245, 197, 66, 0.6),
+    0 0 16px rgba(245, 197, 66, 0.5);
+}
+
+/**textos**/
+
+.texto_inicio {
+    min-height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    text-align: center;
+    color: #f18e94;
+    font-size: 4rem;
+    letter-spacing: 4px;
+
+    text-shadow:
+      0 0 6px rgba(241, 142, 148, 0.7),
+      0 0 14px rgba(241, 142, 148, 0.6),
+      0 0 28px rgba(241, 120, 130, 0.5);
+
+    animation: rosePulse 2.8s infinite alternate;
+}
+
+/**Card**/
+
+.cards {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yugi-card {
+  width: 280px;
+  padding: 20px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  text-align: center;
+  color: #fff;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.yugi-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 25px rgba(241, 142, 148, 0.35),
+              0 18px 40px rgba(0, 0, 0, 0.6);
+}
+.yugi-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.yugi-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+.edition {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  opacity: 0.85;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.buy-btn {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #00e0a8, #00bfa5);
+  color: #0b1f1a;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buy-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 255, 180, 0.8),
+              0 0 22px rgba(0, 224, 168, 0.6);
+}
