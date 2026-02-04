@@ -40,8 +40,8 @@
 
         <div class="busqueda_nav">
             <form class="navform" role="search">
-                <input class="input_snav" type="search" placeholder="Search" aria-label="Search"/>
-                <button class="btn btn_snav" type="submit">Search</button>
+                <input class="input_snav" type="search" placeholder="Buscá lo que necesitás..." aria-label="Search"/>
+                <button class="btn btn_snav" type="submit">Buscar</button>
             </form>
         </div>
 
@@ -52,3 +52,79 @@
             </ul>
         </div>
     </header>
+    
+     <main>
+        
+        <div class="texto_inicio">
+            <h1>Bienvenidos a la Grieta</h1>
+        </div>
+
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="text-center mb-4">
+                        <h2> ¿Tenés un problema con tu producto?</h2>
+                        <p>
+                        ¡Estamos para ayudarte! Contanos qué pasó y nos ponemos en contacto con vos
+                        lo antes posible.
+                        </p>
+                    </div>
+
+                    <form class="form_c">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre y apellido</label>
+                            <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" id="email" placeholder="tuemail@email.com" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="pedido" class="form-label">
+                            Número de pedido <span>(opcional)</span>
+                            </label>
+                            <input type="text" id="pedido" placeholder="#12345">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="producto" class="form-label">Producto</label>
+                            <input type="text" id="producto" placeholder="Nombre del producto">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">¿Qué pasó?</label>
+                            <textarea
+                            id="mensaje"
+                            rows="4"
+                            placeholder="Contanos el problema con el mayor detalle posible"
+                            required
+                            ></textarea>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="archivo" class="form-label">
+                            Adjuntar imagen o captura <span>(opcional)</span>
+                            </label>
+                            <input type="file" id="archivo">
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit">
+                            📩 Enviar consulta
+                            </button>
+                        </div>
+
+                        <p class="text-center mt-3">
+                         Gracias por escribirnos. Te responderemos a la brevedad.
+                        </p>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
