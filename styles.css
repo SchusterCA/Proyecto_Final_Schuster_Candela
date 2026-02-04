@@ -1,92 +1,23 @@
-main {
-    padding-top: 2rem;
-}
 
-
-body {
+.body_web {
     background-image: linear-gradient(to top, #14010f, #1a0113, #1e0217, #23021a, #27021d);
 }
 
-/**sesión**/
-
-.principal_box {
-    background-image: url(../img/inicios.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.h1_txt {
-    font-family: "Jersey 10", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: whitesmoke;
-    text-align: center;
-    margin-top: 10rem;
-    text-shadow: 0.1rem 0.1rem 0.3rem #64024C;
-}
-
-#form-registro {
-    background-color: #ffffffd2;
-    margin: 8rem 40rem 10rem 40rem;
-    border-radius: 1rem;
-    padding: 2rem;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5rem;
-    box-shadow: 0.2rem 0.2rem 1.5rem #64024C;
-}
-
-.btn-primary {
-    margin-left: 9rem;
-    margin-top: 1rem;
-    background-color: #64024C;
-    color: #ffffff;
-    width: 15rem;
-    height: 2.5rem;
-    border-radius: 0.5rem;
-    border: #ffffff;
-}
-
-a {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: rgb(61, 61, 61);
-}
-
-
-.text-registro {
-    color: #ffffff;
-    font-weight: 500;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-top: 1rem;
-}
-
-.text-registro a {
-    color: #FFD700;
-    font-weight: 600;
-    text-decoration: underline;
-    transition: all 0.3s ease;
-}
-
-.text-registro a:hover {
-    color: #FFA500;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-}
-
-
-.link-registro-container {
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 15px;
+h2 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: aliceblue;
+  font-size: 2rem;
 }
 
 /**header**/
 
 .logoimg {
     width: 6rem;
-    margin-top: 0.5rem;
+    margin: 1rem;
 }
 
 header {
@@ -94,7 +25,6 @@ header {
     background-color: #14010F;
     display: flex;
     justify-content: space-between;
-    position: sticky;
 }
 
 .navlink {
@@ -122,19 +52,53 @@ header {
     0 0 16px rgba(245, 197, 66, 0.5);
 }
 
-li {
-  list-style: none;
-}
-
 .busqueda_nav {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .input_snav {
   border-radius: 0.5rem;
   border: none;
-  height: 2rem;
+  height: 1.8rem;
+  width: 15rem;
+  font-size: 0.8rem;
 
+}
+
+.btn_snav {
+  background-color: #00B88D;
+  width: 5rem;
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 0.8rem;
+  height: 1.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin-left: 0.5rem;
+
+}
+
+.btn_snav:hover {
+  background-color: #00A37D;
+
+}
+
+.inicio_carrito {
+  display: flex;
+  align-items: center;
+}
+
+.ic_ul {
+  list-style: none;
+  display: flex;
+  margin: 2rem;
+}
+
+.ic_img {
+  height: 2rem;
+  width: 2rem;
 }
 
 /**textos**/
@@ -169,7 +133,7 @@ li {
   align-items: center;
 }
 
-.yugi-card {
+.y-card {
   width: 280px;
   padding: 20px;
   border-radius: 18px;
@@ -187,18 +151,18 @@ li {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.yugi-card:hover {
+.y-card:hover {
   transform: translateY(-6px) scale(1.05);
   box-shadow: 0 0 25px rgba(241, 142, 148, 0.35),
               0 18px 40px rgba(0, 0, 0, 0.6);
 }
-.yugi-card img {
+.y-card img {
   width: 100%;
   border-radius: 12px;
   margin-bottom: 15px;
 }
 
-.yugi-card h3 {
+.y-card h3 {
   font-size: 1.2rem;
   margin: 10px 0 5px;
   font-weight: 600;
@@ -243,4 +207,140 @@ li {
   transform: scale(1.05);
   box-shadow: 0 0 12px rgba(0, 255, 180, 0.8),
               0 0 22px rgba(0, 224, 168, 0.6);
+}
+
+/**sesión**/
+
+
+.h1_txt {
+  font-size: 2.5rem;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal;
+  min-height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  text-align: center;
+  color: #f18e94;
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+
+text-shadow:
+  0 0 6px rgba(241, 142, 148, 0.7),
+  0 0 14px rgba(241, 142, 148, 0.6),
+  0 0 28px rgba(241, 120, 130, 0.5);
+
+animation: rosePulse 2.8s infinite alternate;
+}
+
+.inicio_box {
+  display: block;
+  background-color: #ffffffc4;
+  margin: 5rem 40rem 16rem 40rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.form-label, .text-registro {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  margin: 0.5rem;
+}
+
+.form-text {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #0094C6;
+}
+
+.btn-acceder {
+  margin-left: 13rem;
+  width: 10rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: #00B88D;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.btn-acceder:hover {
+  background-color: #00A37D ;
+}
+
+/**ver carrito**/
+
+.navbar, .navbar-brand {
+  background-color: #14010F;
+  font-size: 1.5rem;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #FFED65;
+}
+
+.navbar-brand:hover {
+  color: #FFEC5C;
+}
+
+.text-carrito {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.body-carrito {
+  background-color: #420232;
+}
+
+/**footer**/
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color:#14010F;
+  margin: 0.8rem;
+}
+
+.footer-copy {
+  margin-top: 3.5rem;
+  font-size: 0.6rem;
+  color: #FFED65;
+  font-style: italic;
+  font-family: "Cinzel Decorative", serif;
+}
+
+.img_footer {
+  width: 8rem;
+}
+
+.footer-nav {
+  font-family: "Cinzel Decorative", serif;
+  list-style: none;
+  font-size: 0.8rem;
+  margin-top: 3.5rem;
+  display: flex;
+}
+
+.footer-a {
+  text-decoration: none;
+  color: #FFED65;
+  padding: 0.5rem;
+  font-size: 0.6rem;
 }
