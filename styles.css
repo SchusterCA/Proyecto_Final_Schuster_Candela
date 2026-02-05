@@ -135,14 +135,15 @@ header {
 
 .cards {
   margin-bottom: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  justify-items: center;
 }
 
 .y-card {
   height: 43.5rem;
-  margin: 2rem;
+  margin: 1rem;
   width: 20rem;
   padding: 1.5rem;
   border-radius: 1.125rem;
