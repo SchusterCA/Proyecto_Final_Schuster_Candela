@@ -1,61 +1,114 @@
 
+
 class Carrito {
     constructor() {
+
         this.items = this.cargarCarrito();
     }
 
+
     cargarCarrito() {
-        const carritoGuardado = localStorage.getItem('carrito');
-        return carritoGuardado ? JSON.parse(carritoGuardado) : [];
+        try {
+            const carritoGuardado = localStorage.getItem('carrito');
+            return carritoGuardado ? JSON.parse(carritoGuardado) : [];
+        } catch (error) {
+            return [];
+        }
     }
+
 
     guardarCarrito() {
-        localStorage.setItem('carrito', JSON.stringify(this.items));
+        try {
+            localStorage.setItem('carrito', JSON.stringify(this.items));
+        } catch (error) {
+
+        }
     }
 
 
-    agregarItem(carta) {
-        const itemExistente = this.items.find(item => item.nombre === carta.nombre);
+    agregarItem(producto) {
+
+        const itemExistente = this.items.find(item => item.id === producto.id);
         
         if (itemExistente) {
+
+            if (itemExistente.cantidad >= producto.stock) {
+                return {
+                    success: false,
+                    mensaje: `No hay más stock disponible de ${producto.nombre}`
+                };
+            }
             itemExistente.cantidad++;
         } else {
+
             this.items.push({
-                nombre: carta.nombre,
-                precio: carta.precio,
-                juego: carta.juego,
+                id: producto.id,
+                nombre: producto.nombre,
+                precio: producto.precio,
+                juego: producto.juego,
+                imagen: producto.imagen,
+                codigo: producto.codigo,
+                stockDisponible: producto.stock,
                 cantidad: 1
             });
         }
         
         this.guardarCarrito();
         this.actualizarContador();
+        
+        return {
+            success: true,
+            mensaje: `${producto.nombre} agregado al carrito`
+        };
     }
 
 
-    eliminarItem(nombreCarta) {
-        this.items = this.items.filter(item => item.nombre !== nombreCarta);
+    eliminarItem(itemId) {
+        this.items = this.items.filter(item => item.id !== itemId);
         this.guardarCarrito();
         this.actualizarContador();
     }
 
 
-    aumentarCantidad(nombreCarta) {
-        const item = this.items.find(item => item.nombre === nombreCarta);
+    aumentarCantidad(itemId) {
+        const item = this.items.find(item => item.id === itemId);
+        
         if (item) {
+
+            if (item.cantidad >= item.stockDisponible) {
+                return {
+                    success: false,
+                    mensaje: `Stock máximo alcanzado (${item.stockDisponible} unidades)`
+                };
+            }
+            
             item.cantidad++;
             this.guardarCarrito();
+            
+            return {
+                success: true,
+                mensaje: 'Cantidad actualizada'
+            };
         }
+        
+        return {
+            success: false,
+            mensaje: 'Producto no encontrado en el carrito'
+        };
     }
 
 
-    disminuirCantidad(nombreCarta) {
-        const item = this.items.find(item => item.nombre === nombreCarta);
-        if (item && item.cantidad > 1) {
-            item.cantidad--;
-            this.guardarCarrito();
-        } else if (item && item.cantidad === 1) {
-            this.eliminarItem(nombreCarta);
+    disminuirCantidad(itemId) {
+        const item = this.items.find(item => item.id === itemId);
+        
+        if (item) {
+            if (item.cantidad > 1) {
+                item.cantidad--;
+                this.guardarCarrito();
+            } else {
+
+                this.eliminarItem(itemId);
+            }
         }
     }
 
@@ -66,7 +119,9 @@ class Carrito {
 
 
     obtenerPrecioTotal() {
-        return this.items.reduce((total, item) => total + (item.precio * item.cantidad), 0);
+        return this.items.reduce((total, item) => {
+            return total + (item.precio * item.cantidad);
+        }, 0);
     }
 
 
@@ -79,11 +134,35 @@ class Carrito {
 
     actualizarContador() {
         const contador = document.getElementById('contador-carrito');
+        
         if (contador) {
             const total = this.obtenerCantidadTotal();
             contador.textContent = total;
-            contador.style.display = total > 0 ? 'inline-block' : 'none';
+            
+
+            if (total > 0) {
+                contador.style.display = 'flex';
+
+                contador.classList.add('pulse');
+                setTimeout(() => contador.classList.remove('pulse'), 300);
+            } else {
+                contador.style.display = 'none';
+            }
         }
+    }
+
+
+    estaVacio() {
+        return this.items.length === 0;
+    }
+
+
+    obtenerResumen() {
+        return {
+            cantidadItems: this.items.length,
+            cantidadTotal: this.obtenerCantidadTotal(),
+            precioTotal: this.obtenerPrecioTotal()
+        };
     }
 }
 

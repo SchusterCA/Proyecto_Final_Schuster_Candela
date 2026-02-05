@@ -3,89 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos</title>
+    <title>Iniciar Sesión - La Grieta del Duelista</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../normalize.css">
 </head>
 <body class="body_web">
     <main class="contenedor_main">
-
         <div id="contenedor-login">
-
             <div class="h1_txt">
-                <h1>Por favor, iniciá tu sesión</h1>
+                <h1>Iniciá tu sesión</h1>
             </div>
 
             <div class="iniciobox">
-                <form class="inicioform" id="form-login">
+                <form class="inicioform" id="form-login" autocomplete="on">
                     <div class="part1">
-                        <label for="exampleInputEmail1" class="form-labelin">email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        <label for="email-login" class="form-labelin">Email</label>
+                        <input 
+                            type="email" 
+                            class="form-control" 
+                            id="email-login" 
+                            placeholder="ejemplo@email.com"
+                            value="duelista@grieta.com"
+                            autocomplete="email"
+                            required
+                        >
                     </div>
                     <div class="part2">
-                        <label for="exampleInputPassword1" class="form-labelin">contraseña</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" required>
-                        <div id="emailHelp"><a class="form-text" target="_blank" href="">olvidaste tu contraseña?</a></div>
+                        <label for="password-login" class="form-labelin">Contraseña</label>
+                        <input 
+                            type="password" 
+                            class="form-control" 
+                            id="password-login"
+                            placeholder="Tu contraseña"
+                            value="123456"
+                            autocomplete="current-password"
+                            required
+                        >
+                        <small class="form-text text-muted">
+                            <em>Demo: duelista@grieta.com / 123456</em>
+                        </small>
                     </div>
 
                     <div id="mensaje-error" class="alert alert-danger d-none mt-3" role="alert"></div>
 
                     <div class="part3">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">recordarme</label>
+                        <input type="checkbox" class="form-check-input" id="recordarme">
+                        <label class="form-check-label" for="recordarme">Recordarme</label>
                     </div>
-                    <button type="submit" class="btn-acceder">acceder</button>
+                    
+                    <button type="submit" class="btn-acceder">Acceder</button>
                 </form>
 
-
                 <div class="text-center mt-3">
-                    <div class="link-registro-container" style="display: inline-block;">
-                        <p class="text-registro mb-0">¿No tenés cuenta? <a class="form-text" href="#" id="link-registro">Registrate aquí</a></p>
-                    </div>
+                    <p class="text-registro mb-0">
+                        ¿No tenés cuenta? 
+                        <a class="form-text link-registro" href="#" id="link-registro">Registrate aquí</a>
+                    </p>
+                </div>
+                
+                <div class="text-center mt-2">
+                    <a href="../index.html" class="form-text">← Volver a la tienda</a>
                 </div>
             </div>
         </div>
+
 
         <div id="contenedor-registro" style="display: none;">
             <div class="h1_txt">
                 <h1>Crear cuenta nueva</h1>
             </div>
 
-            <div class="inicio_box">
-                <form id="form-registro">
+            <div class="iniciobox">
+                <form id="form-registro" autocomplete="on">
                     <div class="part1">
-                        <label for="nombre-registro" class="form-label">nombre completo</label>
-                        <input type="text" class="form-control" id="nombre-registro" required>
+                        <label for="nombre-registro" class="form-labelin">Nombre completo</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="nombre-registro"
+                            placeholder="Tu nombre completo"
+                            value="Nuevo Duelista"
+                            autocomplete="name"
+                            minlength="2"
+                            required
+                        >
                     </div>
                     <div class="part1">
-                        <label for="email-registro" class="form-label">email</label>
-                        <input type="email" class="form-control" id="email-registro" required>
+                        <label for="email-registro" class="form-labelin">Email</label>
+                        <input 
+                            type="email" 
+                            class="form-control" 
+                            id="email-registro"
+                            placeholder="tuemail@ejemplo.com"
+                            value="nuevo@ejemplo.com"
+                            autocomplete="email"
+                            required
+                        >
                     </div>
                     <div class="part2">
-                        <label for="password-registro" class="form-label">contraseña</label>
-                        <input type="password" class="form-control" id="password-registro" minlength="6" required>
-                        <div class="form-text">Mínimo 6 caracteres</div>
+                        <label for="password-registro" class="form-labelin">Contraseña</label>
+                        <input 
+                            type="password" 
+                            class="form-control" 
+                            id="password-registro"
+                            placeholder="Mínimo 6 caracteres"
+                            value="123456"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required
+                        >
+                        <small class="form-text text-muted">Mínimo 6 caracteres</small>
                     </div>
-
+                    <div class="part2">
+                        <label for="password-confirm" class="form-labelin">Confirmar contraseña</label>
+                        <input 
+                            type="password" 
+                            class="form-control" 
+                            id="password-confirm"
+                            placeholder="Repetí tu contraseña"
+                            value="123456"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required
+                        >
+                    </div>
 
                     <div id="mensaje-registro" class="alert d-none mt-3" role="alert"></div>
 
-                    <button type="submit" class="btn-primary">registrarse</button>
+                    <button type="submit" class="btn-acceder">Registrarse</button>
                 </form>
 
-
                 <div class="text-center mt-3">
-                    <p>¿Ya tenés cuenta? <a href="#" id="link-login" style="text-decoration: underline;">Iniciá sesión</a></p>
+                    <p class="text-registro mb-0">
+                        ¿Ya tenés cuenta? 
+                        <a href="#" class="form-text link-registro" id="link-login">Iniciá sesión</a>
+                    </p>
+                </div>
+                
+                <div class="text-center mt-2">
+                    <a href="../index.html" class="form-text">← Volver a la tienda</a>
                 </div>
             </div>
         </div>
     </main>
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../js/auth.js"></script>
     <script src="../js/login-script.js"></script>
 </body>

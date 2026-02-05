@@ -1,0 +1,121 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Change of Heart",
+      "codigo": "MRD-060",
+      "descripcion": "Selecciona 1 monstruo que controle tu adversario; toma el control de ese objetivo hasta la End Phase.",
+      "precio": 2896.93,
+      "stock": 5,
+      "categoria": "cartas",
+      "juego": "Yu-Gi-Oh!",
+      "imagen": "./assets/changeofheart.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "The Chronicles Deck",
+      "codigo": "CH02",
+      "descripcion": "Spirit Charmers (All-Foil Edition) Deck - THE CHRONICLES DECK: Spirit Charmers (All-Foil Edition)",
+      "precio": 17381.56,
+      "stock": 3,
+      "categoria": "mazos",
+      "juego": "Yu-Gi-Oh!",
+      "imagen": "./assets/tcd.png"
+    },
+    {
+      "id": 3,
+      "nombre": "Mulcharmy Purulia",
+      "codigo": "L5DD",
+      "descripcion": "Si no controlas cartas (Efecto Rápido): puedes descartar esta carta; aplica efectos en el turno.",
+      "precio": 11587.71,
+      "stock": 8,
+      "categoria": "cartas",
+      "juego": "Yu-Gi-Oh!",
+      "imagen": "./assets/Mulcharmy Purulia.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "2003 Collectors Tin",
+      "codigo": "BPT-2003",
+      "descripcion": "Yami Yugi & Dark Magician - 2003 Collectors Tin (BPT)",
+      "precio": 782170.11,
+      "stock": 1,
+      "categoria": "coleccionables",
+      "juego": "Yu-Gi-Oh!",
+      "imagen": "./assets/set-1.png"
+    },
+    {
+      "id": 5,
+      "nombre": "Anotherverse Solaria",
+      "codigo": "YCSW-EN015",
+      "descripcion": "El dios estelar de otro mundo, albergando su sol crepuscular.",
+      "precio": 542927.31,
+      "stock": 2,
+      "categoria": "cartas",
+      "juego": "Yu-Gi-Oh!",
+      "imagen": "./assets/anotherverse-solaria.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Ascension Sky Dragon",
+      "codigo": "YCSW-EN007",
+      "descripcion": "Sólo puedes usar este efecto de 'Ascenso, Dragón Celestial' una vez por turno.",
+      "precio": 1000.00,
+      "stock": 10,
+      "categoria": "cartas",
+      "juego": "Yu-Gi-Oh!",
+      "imagen": "./assets/ascension-sky-d.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "Monkey Palace",
+      "codigo": "LEGO-MP01",
+      "descripcion": "Construí tu camino hacia la victoria pieza a pieza.",
+      "precio": 99900.00,
+      "stock": 4,
+      "categoria": "juegos-mesa",
+      "juego": "LEGO",
+      "imagen": "./assets/monkey-palace.png"
+    },
+    {
+      "id": 8,
+      "nombre": "Splendor",
+      "codigo": "SPL-001",
+      "descripcion": "Splendor es el juego ideal para los que aman la estrategia sin complicarse la vida.",
+      "precio": 74250.00,
+      "stock": 6,
+      "categoria": "juegos-mesa",
+      "juego": "Juego de Mesa",
+      "imagen": "./assets/splendor.png"
+    },
+    {
+      "id": 9,
+      "nombre": "Akropolis",
+      "codigo": "ATH-001",
+      "descripcion": "¡Llega la expansión que potencia tu ciudad al máximo!",
+      "precio": 35200.00,
+      "stock": 7,
+      "categoria": "juegos-mesa",
+      "juego": "Athena",
+      "imagen": "./assets/athenas.png"
+    },
+    {
+      "id": 10,
+      "nombre": "Teardrop the Rikka",
+      "codigo": "SESL-EN016",
+      "descripcion": "Una hermosa carta de la arquetipo Rikka con efectos especiales de plantas.",
+      "precio": 8500.00,
+      "stock": 12,
+      "categoria": "cartas",
+      "juego": "Yu-Gi-Oh!",
+      "imagen": "./assets/teardrop-the-rikka.jpg"
+    }
+  ],
+  "categorias": [
+    { "id": "todos", "nombre": "Todos los productos" },
+    { "id": "cartas", "nombre": "Cartas Sueltas" },
+    { "id": "mazos", "nombre": "Mazos" },
+    { "id": "coleccionables", "nombre": "Coleccionables" },
+    { "id": "juegos-mesa", "nombre": "Juegos de Mesa" }
+  ]
+}
